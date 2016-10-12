@@ -1,0 +1,67 @@
+#!/bin/bash
+function cleanup
+{
+  clear
+}
+
+function display
+{
+  local step=$1
+  if [[ step -eq 1 ]]; then
+    echo '
+ROFL:ROFL:LOL:ROFL:ROFL
+         __^___
+      __/   [o] \
+LOL===__         \
+        \_________]
+         I   I
+    --------------/
+'
+  elif [[ step -eq 2 ]]; then
+    echo '
+     LMAO:LOL:LMAO
+         __^___
+ L    __/   [o] \
+ O====__         \
+ L      \_________]
+         I   I
+    --------------/
+'
+  elif [[ step -eq 3 ]]; then
+    echo '
+          LOL
+         __^___
+      __/   [o] \
+LOL===__         \
+        \_________]
+         I   I
+    --------------/
+'
+  fi
+
+}
+
+function animate
+{
+  display 1
+	sleep 0.1
+  cleanup
+  display 2
+	sleep 0.1
+  cleanup
+  display 3
+	sleep 0.1
+  cleanup
+  display 2
+	sleep 0.1
+  cleanup
+}
+
+function main
+{
+  while true; do
+    animate
+  done
+}
+
+main
